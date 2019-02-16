@@ -175,11 +175,11 @@ section {
   .header {
     text-align: center;
   }
+  .header-btn {
+    width: 50%;
+  }
   .wrap-block {
     text-align: center;
-  }
-  .main-title {
-    margin-top: 4rem;
   }
   .main-title h1 {
     display: inline-block;
