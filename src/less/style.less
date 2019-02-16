@@ -50,6 +50,16 @@ body{
     .reg();
 }
 
+a:hover{
+    text-decoration: none;
+}
+
+button, input, a{
+    &:focus{
+        outline: none;
+    }
+}
+
 .button{
     padding: 1rem 3rem;
     border-radius: 8px;
@@ -58,6 +68,11 @@ body{
     color:@light;
     text-transform: uppercase;
     border:none;
+    transition: all 0.2s;
+    &:hover{
+        cursor: pointer;
+        background-color: darken(@btn-color,5%);
+    }
 }
 
 /* Typography */
@@ -74,9 +89,9 @@ section{
         margin-top: 10rem;
         /* Main title */
         h1{
-            margin-bottom:4rem;
+            //margin-bottom:4rem;
             .bold();
-            font-style: 4rem;
+            font-size: 4rem;
             line-height: 1.45;
             text-transform: uppercase;    
         }
@@ -115,7 +130,7 @@ section{
         /* Main form title */
         &-header{
             margin-bottom: 4rem;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             strong{
                 font-size: 1.9rem;
             }
@@ -127,6 +142,7 @@ section{
             border:1px solid @border-input;
             padding: 1.5rem;
             margin: 2rem 0rem;
+            //font-size: 14px;
         }
         /* Label */
         label{
@@ -170,7 +186,39 @@ section{
     font-size: 2rem;
     height: 7rem;
     line-height: 7rem;
-    text-align: right;
-    width: 100%;
     color:@text;
 }
+
+/* Media */
+@media (max-width:992px){
+    .main{
+        background-position: top right;
+    }
+    .phone-block{
+        text-align: center;
+    }
+    .main-title{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width:768px) and (min-width:577px){
+    .main{
+        background-position: left;
+    }
+    .header{
+        text-align: center;  
+    }
+    .wrap-block{
+        text-align: center;
+    }
+    .main-title{
+    margin-top: 4rem;
+    & h1{
+        display: inline-block;
+        text-align: center;
+    }
+    }
+}
+

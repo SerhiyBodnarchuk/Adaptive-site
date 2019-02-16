@@ -21,6 +21,14 @@ html {
 body {
   font-family: 'ProximaNova_reg', sans-serif;
 }
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
 .button {
   padding: 1rem 3rem;
   border-radius: 8px;
@@ -29,6 +37,12 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #e3a103;
 }
 /* Typography */
 section {
@@ -49,9 +63,8 @@ section {
   /* Main title */
 }
 .main-content h1 {
-  margin-bottom: 4rem;
   font-family: 'ProximaNova_bold', sans-serif;
-  font-style: 4rem;
+  font-size: 4rem;
   line-height: 1.45;
   text-transform: uppercase;
 }
@@ -90,7 +103,7 @@ section {
 }
 .main-form-header {
   margin-bottom: 4rem;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 .main-form-header strong {
   font-size: 1.9rem;
@@ -140,7 +153,36 @@ section {
   font-size: 2rem;
   height: 7rem;
   line-height: 7rem;
-  text-align: right;
-  width: 100%;
   color: #1a1820;
+}
+/* Media */
+@media (max-width: 992px) {
+  .main {
+    background-position: top right;
+  }
+  .phone-block {
+    text-align: center;
+  }
+  .main-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 768px) and (min-width: 577px) {
+  .main {
+    background-position: left;
+  }
+  .header {
+    text-align: center;
+  }
+  .wrap-block {
+    text-align: center;
+  }
+  .main-title {
+    margin-top: 4rem;
+  }
+  .main-title h1 {
+    display: inline-block;
+    text-align: center;
+  }
 }
