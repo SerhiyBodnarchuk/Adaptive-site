@@ -164,13 +164,24 @@ section {
     text-align: center;
   }
   .main-title {
+    margin-top: 3rem;
     text-align: center;
     margin-bottom: 3rem;
+  }
+  .wrap-block {
+    text-align: center;
   }
 }
 @media (max-width: 768px) and (min-width: 577px) {
   .main {
     background-position: left;
+  }
+  .main-title {
+    margin-top: 0rem;
+  }
+  .main-title h1 {
+    display: inline-block;
+    text-align: center;
   }
   .header {
     text-align: center;
@@ -178,11 +189,20 @@ section {
   .header-btn {
     width: 50%;
   }
+}
+@media (max-width: 576px) {
+  .logo {
+    text-align: center;
+  }
   .wrap-block {
     text-align: center;
   }
+  .header-btn {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 510px) {
   .main-title h1 {
-    display: inline-block;
-    text-align: center;
+    font-size: 2.1rem;
   }
 }
