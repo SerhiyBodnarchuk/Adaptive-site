@@ -48,6 +48,12 @@ a:focus {
 section {
   padding: 10rem 0;
 }
+.section-header {
+  margin: 2rem 0 10rem;
+  text-align: center;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 3.6rem ;
+}
 /* main */
 .main {
   padding: 3rem 0 5rem 0;
@@ -154,6 +160,31 @@ section {
   height: 7rem;
   line-height: 7rem;
   color: #1a1820;
+}
+/* Features section */
+.features-block {
+  text-align: center;
+}
+.features-block h3 {
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.features-block p {
+  display: inline-block;
+  font-size: 1.4rem;
+  width: 80%;
+}
+.features-img {
+  height: 8rem;
+  margin-bottom: 3rem;
+}
+.features-img img {
+  display: block;
+  margin: 0rem auto;
+}
+.slick-active {
+  outline: none;
 }
 /* Media */
 @media (max-width: 992px) {
