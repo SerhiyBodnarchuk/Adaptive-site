@@ -186,6 +186,26 @@ section {
 .slick-active {
   outline: none;
 }
+.arrow {
+  top: 13%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  position: absolute;
+  z-index: 50;
+}
+.prev {
+  background: url(../img/features/arrow-left.svg) center no-repeat;
+  left: 5%;
+  background-size: 70%;
+}
+.next {
+  background: url(../img/features/arrow-right.svg) center no-repeat;
+  right: 5%;
+  background-size: 70%;
+}
 /* Media */
 @media (max-width: 992px) {
   .main {
