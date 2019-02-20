@@ -49,7 +49,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
                         <div class="wrap">
                             <div class="wrap-block">
-                                <button class="button header-btn">
+                                <button class="button header-btn popup-btn">
                                     Получить констультацию
                                 </button>
                             </div>
@@ -146,6 +146,31 @@
         </div>
     </section>
 
+    <!-- Modals -->
+    <!-- Get advice -->
+    <div class="popup">
+        <div class="popup-dialog">
+            <div class="popup-content">
+                <button class="popup-close">&times;</button>
+                <h4 class="popup-header">Заинтересовало?</h4>
+                <p>Оставьте свои контактные данные <br>для связи</p>
+                <div class="main-form popup-form">
+                    <form action="#">
+                        <label for="#">Ваше имя</label>
+                        <input class="main-form-input" type="text">
+                        <label for="#">Номер телефона</label>
+                        <input class="main-form-input" type="text">
+                        <label for="#">Сообщение</label>
+                        <textarea class="main-form-input" rows="5"></textarea>
+                        <button class="main-form-btn button" type="submit">Оставьте заявку</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JQuery -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Slick slider CSS -->
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
@@ -153,32 +178,40 @@
     <script src="slick/slick.min.js"></script>
     <script>
         $(document).ready(function () {
+            $('.popup-btn').on('click', function(event){
+                event.preventDefault();
+                $('.popup').fadeIn();
+            });
+            $('.popup-close').on('click', function (event) {
+                event.preventDefault();
+                $('.popup').fadeOut();
+            })
             $('.features-slider').slick({
                 infinite: true,
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                    prevArrow: '<button class="prev arrow"></button>',
-                    nextArrow: '<button class="next arrow"></button>',
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    prevArrow: '<button class="prev arrow"></button>',
-                    nextArrow: '<button class="next arrow"></button>',
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-});
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 2,
+                            prevArrow: '<button class="prev arrow"></button>',
+                            nextArrow: '<button class="next arrow"></button>',
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            prevArrow: '<button class="prev arrow"></button>',
+                            nextArrow: '<button class="next arrow"></button>',
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
 
     </script>
 </body>
