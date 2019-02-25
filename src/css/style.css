@@ -52,8 +52,16 @@ section {
 .section-header {
   margin: 2rem 0 10rem;
   text-align: center;
+}
+.section-header_light {
+  color: #ffffff;
+}
+.section-header h2 {
   font-family: 'ProximaNova_bold', sans-serif;
   font-size: 3.6rem ;
+}
+.section-header p {
+  font-size: 1.4rem;
 }
 /* main */
 .main {
@@ -208,6 +216,62 @@ label {
   right: 5%;
   background-size: 70%;
 }
+/* Prices */
+.price {
+  background: #46b814 url(../img/prices/prices-bg.jpg) center;
+  /* Cards with prices */
+}
+.price-header-btn {
+  margin-top: 2.5rem;
+}
+.price-button {
+  text-align: right;
+}
+.price-block {
+  margin-top: 2rem;
+}
+.price-block {
+  padding: 1rem 3rem 4rem;
+  min-height: 50rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+          box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+  text-align: center;
+}
+.price-block h4 {
+  margin: 3rem 0;
+  font-size: 1.9rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.price-block img {
+  width: 100%;
+  max-width: 30rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.price-tag {
+  display: block;
+  font-size: 1.9rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  margin-bottom: 2rem;
+}
+.price-list {
+  list-style: none;
+  padding: 0;
+  min-height: 14rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+.price-list li:before {
+  content: ' ';
+  margin-right: 1rem;
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(../img/prices/ico.png) center no-repeat;
+  background-size: 100% ;
+  vertical-align: middle;
+}
 /* Modal */
 .popup {
   display: none;
@@ -264,6 +328,17 @@ label {
   }
   .wrap-block {
     text-align: center;
+  }
+  .price-button {
+    text-align: center;
+    padding: 2rem;
+  }
+  .price-header-btn {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .section-header_light {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 768px) and (min-width: 577px) {
