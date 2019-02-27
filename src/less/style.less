@@ -311,7 +311,69 @@ label{
         }
     }
 }
-
+/* Feedback section */
+.feedback{
+    background: url(../img/feedback/feedback-bg.jpg) no-repeat center;
+    background-size: cover;
+    &-prev-btn{
+        left:-4rem;
+    }
+    &-next-btn{
+        right:-4rem;
+    }
+    &-text{
+        position: relative;
+        margin-top: 2rem;
+        padding:1rem; 
+        text-align: left;
+        font-style: italic;
+        border:2px solid @icons-color;
+        &::before{
+            content: '';
+           display:block;
+           position: absolute;
+           top:-2rem;
+           left:4rem;
+           width: 2rem;
+           height: 2rem; 
+           border:2px solid @icons-color;
+           background-color: @light;
+           border-bottom:none;
+           border-top-right-radius: 2rem;
+        }
+    }
+    &-slider{
+        padding: 5rem 6rem;
+        background-color: @light;
+        box-shadow: 6px 10px 18px 0px rgba(0,0,0,0.11);
+        .media{
+            margin-top: 3rem;
+            font-size: 1.4rem;
+            text-align: left;
+            h4{
+                .bold();
+            }
+            &-body{
+                margin-left:1rem;
+            }
+        }
+        p{
+            font-size: 1.6rem;
+        }
+        &-btn{
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            width: 4rem;
+            height: 5rem;
+            background-color: @icons-color;
+            border:none;
+            img{
+                width: 50%;
+            }
+        }
+    }
+}
 
 /* Modal */ 
 .popup{
